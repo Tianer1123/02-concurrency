@@ -1,13 +1,5 @@
 mod matrix;
+mod vector;
 
 pub use matrix::{multiply, Matrix};
-
-impl<T> Matrix<T> {
-    pub fn new(data: impl Into<Vec<T>>, row: usize, col: usize) -> Self {
-        Self {
-            data: data.into(),
-            row,
-            col,
-        }
-    }
-}
+pub use vector::{dot_product, Vector};
